@@ -1,7 +1,7 @@
-export type RepoStateType = {
+export type InitialStateType = {
     loading: boolean;
-    error: string | null;
-    data: string[];
+    error: boolean; 
+    data: string[] | undefined;
 };
 
 export type SearchRepo = {

@@ -1,29 +1,28 @@
-"use client";
+import { useSelector, useDispatch } from "react-redux";
+import fetchPackages from "@/redux/searchSlice";
 import { useState } from "react";
-import { useActions } from "@/hooks/useActions";
+import { AppDispatch, RootState } from "@/redux/store";
+import { UnknownAction } from "@reduxjs/toolkit";
 
-const SearchForm: React.FC = () => {
+export const SearchForm = () => {
     const [term, setTerm] = useState("");
-    const { searchRepos } = useActions()
+    const dispatch = useDispatch();
+    const data = useSelector((state: RootState) => state);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
 
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="search" id="search">
-                Search
-            </label>
+            <label id="search">Search</label>
             <input
+                id="search"
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
-                id="search"
-                name="search"
             />
-            <button type="submit">Search</button>
         </form>
     );
 };
-export default SearchForm;

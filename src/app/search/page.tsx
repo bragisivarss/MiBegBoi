@@ -1,11 +1,10 @@
 "use client";
-import { Header, SearchProvider} from "@/components";
+import { Header } from "@/components";
 
 const SearchPage: React.FC = () => {
     return (
         <>
-            <Header />;
-            <SearchProvider />
+            <Header />
         </>
     );
 };

@@ -1,6 +1,6 @@
-import { ActionType, RepoStateType, Action } from "../types/reduxTypes";
+import { ActionType, RepoStateType, Action } from "@/types/ReduxSearchType"
 
-const initialState: RepoStateType = {
+export const initialState: RepoStateType = {
     loading: false,
     error: null,
     data: [],

@@ -8,7 +8,7 @@ const initialState: InitialStateType = {
     data: [],
 };
 
-export const fetchPackages = createAsyncThunk(
+export const fetchPackages = createAsyncThunk<string[], string>(
     "fetchPackages",
     async (term: string) => {
         try {

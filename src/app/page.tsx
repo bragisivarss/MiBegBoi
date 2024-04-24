@@ -1,14 +1,9 @@
-"use client";
-import { Header } from "@/components";
-import { Provider } from "react-redux";
-import { store } from "@/redux/store";
+import { Landing } from "@/components";
 
 const LandingPage: React.FC = () => {
     return (
         <>
-            <Provider store={store}>
-                <Header />
-            </Provider>
+            <Landing />
         </>
     );
 };

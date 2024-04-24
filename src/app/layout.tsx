@@ -1,22 +1,31 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components";
+import { StoreProvider } from "./ProviderStore";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata: Metadata = {
-  title: "Bara leikaser",
-  description: "Flottur kall ad leikaser",
+    title: "Bara leikaser",
+    description: "Flottur kall ad leikaser",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+    children: React.ReactNode;
+}>) 
+  {
+    return (
+        <StoreProvider>
+            <html lang="en">
+                <body className={inter.className}>
+                    <Header />
+                    {children}
+                </body>
+            </html>
+            </StoreProvider>
+    );
 }

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 
 import {
-    searchSlice,
     searchAsync,
     selectValue,
     selectStatus,

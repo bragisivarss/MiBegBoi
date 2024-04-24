@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
                 <a href="./about">About Us</a>
             </div>
             <div className="header-image">
-                <Image priority src={hoddiogeg} alt="logo" height={55} width={60} style={{borderRadius: "1rem"}}/>
+                <Image placeholder="blur" src={hoddiogeg} alt="logo" height={55} width={60} style={{borderRadius: "1rem"}}/>
             </div>
         </div>
     );
